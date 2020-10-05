@@ -1,5 +1,5 @@
 {
-"title": "lesson.template",
+"title": "Data Cleaning with OpenRefine",
 "creators": [
     {
       "affiliation": "University of Florida",
@@ -7,11 +7,14 @@
       "orcid": "0000-0002-8630-1458"
     }
 ],
-    "description": "What the package does (one paragraph).",
+    "description": "OpenRefine (formerly Google Refine) is a powerful free and open source tool for data cleaning, enabling you to correct errors in the data, and make sure that the values and formatting are consistent. In addition, OpenRefine records your processing steps, enabling you to apply the same cleaning procedure to other data, and enhancing the reproducibility of your analysis. This workshop will teach you to use OpenRefine to clean and format data and automatically track any changes that you make.",
     "keywords": [
     "Open Educational Resources",
     "Research Support Skills",
-    "Version Control",
+    "Data Cleaning",
+    "Research Data Management", 
+    "Data", 
+    "OpenRefine", 
     "Workshop"
   ],
     "access_right": "open",

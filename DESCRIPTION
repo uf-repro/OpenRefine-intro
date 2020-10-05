@@ -1,13 +1,13 @@
-Package: lesson.template
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Package: OpenRefineIntro
+Title: Data Cleaning with OpenRefine
+Version: 0.1.0
 Authors@R: 
     person(given = "Hao",
            family = "Ye",
            role = c("aut", "cre"),
            email = "haoye@ufl.edu",
            comment = c(ORCID = "0000-0002-8630-1458"))
-Description: What the package does (one paragraph).
+Description: OpenRefine (formerly Google Refine) is a powerful free and open source tool for data cleaning, enabling you to correct errors in the data, and make sure that the values and formatting are consistent. In addition, OpenRefine records your processing steps, enabling you to apply the same cleaning procedure to other data, and enhancing the reproducibility of your analysis. This workshop will teach you to use OpenRefine to clean and format data and automatically track any changes that you make.
 License: CC BY 4.0
 Encoding: UTF-8
 LazyData: true
@@ -17,3 +17,4 @@ Imports:
     showtext,
     xaringan,
     xaringanthemer
+URL: https://github.com/uf-repro/OpenRefine-intro
