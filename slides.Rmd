@@ -53,11 +53,20 @@ class: inverse, center, middle
 # What is OpenRefine?
 
 OpenRefine is a free, open-source tool for cleaning data:
-* Data errors are surprisingly common (but not always serious)
 * Correcting errors by hand is easy for small datasets, but:
   - more tedious for larger datasets
   - harder to find in larger datasets
   - reproducing corrections to other datasets is challenging!
+
+---
+# OpenRefine is NOT for:
+
+* very large datasets (e.g. > 1 million rows)
+* complicated calculations (e.g. numerical simulations involving tabular data)
+* non-tabular data; though it can handle other forms of untidy data: 
+  - variables in rows
+  - multiple values in a single row or column
+  - values in multiple rows or columns)
 
 ---
 # Learning Outcomes
@@ -88,9 +97,10 @@ class: inverse, center, middle
 * load your data or an existing project
 * do your data cleaning tasks
 * **OpenRefine does not modify your data files!**
-  - save project
-  - export data 
-  - export data cleaning script
+* Get work out by:
+  - saving project
+  - exporting data 
+  - exporting data cleaning script
 
 ---
 # Importing Data
@@ -109,10 +119,10 @@ knitr::include_graphics("import_preview.png")
 ```
 
 ---
-# Explore Distributions
+# Saving and Loading Projects
 
-```{r, echo = FALSE, fig.cap = "Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and faceting the 'yr' column as text."}
-knitr::include_graphics("text_facet.png")
+```{r, echo = FALSE, fig.cap = "Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and exporting the OpenRefine project archive."}
+knitr::include_graphics("export_project.png")
 ```
 
 ---
@@ -121,10 +131,10 @@ class: center, middle
 # DEMO
 
 ---
-# Saving and Loading Projects
+# Explore Distributions
 
-```{r, echo = FALSE, fig.cap = "Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and exporting the OpenRefine project archive."}
-knitr::include_graphics("export_project.png")
+```{r, echo = FALSE, fig.cap = "Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and faceting the 'yr' column as text."}
+knitr::include_graphics("text_facet.png")
 ```
 
 ---
@@ -197,7 +207,7 @@ class: center, middle
 
 OpenRefine has a lot of functionality:
 * simple interface for data cleaning
-* programmable interface for anything not built-in
+* syntax for doing data transformations
 * reproducible processing workflows
 * lots of online examples and extensions
 
