@@ -1,6 +1,6 @@
 Package: OpenRefineIntro
 Title: Data Cleaning with OpenRefine
-Version: 0.4.0
+Version: 0.9.0
 Authors@R: 
     person(given = "Hao",
            family = "Ye",

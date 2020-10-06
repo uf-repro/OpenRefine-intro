@@ -173,16 +173,33 @@ knitr::include_graphics("edit_column.png")
 class: center, middle
 
 # DEMO
+
 ---
 class: inverse, center, middle
 
 # Saving Data Cleaning Steps
 
 ---
+# Reproducibility
 
 * OpenRefine records all data transformation steps
-* `Undo/Redo` allows you to playback the transformations
-* `Extract` enables 
+* `Undo/Redo` allows you to select different stages of processing to revert to
+* `Extract` allows you to export the transformation steps in JSON format
+* `Apply` allows you to re-use a set of transformations from JSON format
+
+---
+class: center, middle
+
+# DEMO
+
+---
+# Summary
+
+OpenRefine has a lot of functionality:
+* simple interface for data cleaning
+* programmable interface for anything not built-in
+* reproducible processing workflows
+* lots of online examples and extensions
 
 ---
 # Thanks

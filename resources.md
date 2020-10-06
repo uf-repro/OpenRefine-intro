@@ -20,3 +20,8 @@
 
 * ["OpenRefine"](https://openrefine.org/)
   - the OpenRefine tool for cleaning data
+  
+* ["fusepoolP3
+/
+p3-batchrefine"](https://github.com/fusepoolP3/p3-batchrefine)
+  - a command-line tool to programmatically run OpenRefine on many / large datasets
