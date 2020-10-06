@@ -10,6 +10,9 @@
 
 ## Useful Resources
 
+* [OpenRefine LibGuide](https://guides.library.illinois.edu/openrefine)
+  - Extensive Guide to the features of OpenRefine
+
 * [General Refine Expression Language (GREL)](https://github.com/OpenRefine/OpenRefine/wiki/General-Refine-Expression-Language)
   - Documentation on the GREL syntax for manipulating data in OpenRefine
   
