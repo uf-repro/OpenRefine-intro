@@ -1,5 +1,5 @@
 ---
-title: "lesson-template"
+title: "Data Cleaning with OpenRefine"
 author: "Hao Ye"
 institute: "Health Science Center Libraries, University of Florida"
 date: "(updated: `r Sys.Date()`)"
@@ -50,37 +50,156 @@ class: inverse, center, middle
 ### (updated: `r Sys.Date()`)
 
 ---
-# Motivations
+# What is OpenRefine?
 
-* because
+OpenRefine is a free, open-source tool for cleaning data:
+* Data errors are surprisingly common (but not always serious)
+* Correcting errors by hand is easy for small datasets, but:
+  - more tedious for larger datasets
+  - harder to find in larger datasets
+  - reproducing corrections to other datasets is challenging!
 
 ---
 # Learning Outcomes
 
 By the end of the workshop, participants will be able to:
-* 
+* load and examine data in OpenRefine
+* save and re-open OpenRefine projects
+* use clustering and transforms to correct data errors
+* export data cleaning steps as scripts
 
 ---
 class: inverse, center, middle
 
-# Subheading
+# Introduction to OpenRefine
 
 ---
-# Topic
+# Basic Workflow
 
-Description
-
---
-## So what?
-
-* reason!
-* another reason!
+* Download from https://openrefine.org/download.html
+* OpenRefine runs in your web browser:
+  - starting the application should open a browser window
+  - if not, navigate to http://127.0.0.1:3333/ once the app is running
+* OpenRefine does *NOT* modify the original data
 
 ---
+# Workflow steps
 
-```{r, echo = FALSE, fig.cap = "Figure alt-text"}
-knitr::include_graphics("image.jpg")
+* load your data or an existing project
+* do your data cleaning tasks
+* **OpenRefine does not modify your data files!**
+  - save project
+  - export data 
+  - export data cleaning script
+
+---
+# Importing Data
+
+* OpenRefine can import most tabular data formats:
+  - tab-separated values, comma-separated values, custom separators
+  - excel spreadsheets (`.xls`, `.xlsx`)
+  - many others
+* check settings on import preview
+
+---
+# Import Preview
+
+```{r, echo = FALSE, fig.cap = "Screenshot of 'OpenRefine' import screen, using the sample data from https://ndownloader.figshare.com/files/7823341, and showing both the tabular preview and the options for parsing the headers and delimiters."}
+knitr::include_graphics("import_preview.png")
 ```
+
+---
+# Explore Distributions
+
+```{r, echo = FALSE, fig.cap = "Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and faceting the 'yr' column as text."}
+knitr::include_graphics("text_facet.png")
+```
+
+---
+class: center, middle
+
+# DEMO
+
+---
+# Saving and Loading Projects
+
+```{r, echo = FALSE, fig.cap = "Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and exporting the OpenRefine project archive."}
+knitr::include_graphics("export_project.png")
+```
+
+---
+class: center, middle
+
+# DEMO
+
+---
+class: inverse, center, middle
+
+# Basic Error Correction
+
+---
+# Categorical Variables
+
+* data values might have typos and/or other errors
+* How do you detect and fix these errors?
+--
+  1. directly edit the labels in Facet mode
+  2. use 'Cluster' options to group similar category labels
+
+---
+class: center, middle
+
+# DEMO
+
+---
+# Column Transformations
+
+* re-order / re-name columns
+* merge or split columns (by certain separators)
+
+```{r, echo = FALSE, fig.cap = "Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and showing the 'Edit Column options' when selecting the 'scientificName' column."}
+knitr::include_graphics("edit_column.png")
+```
+
+---
+# Value Transformations
+
+* convert types
+* common edits (converting case, removing whitespace, etc.)
+* fill in empty cells if they represent repeated values from above
+* generic scripting language (General Refine Expression Language)
+
+---
+class: center, middle
+
+# DEMO
+
+---
+class: inverse, center, middle
+
+# Saving Data Cleaning Steps
+
+---
+# Reproducibility
+
+* OpenRefine records all data transformation steps
+* `Undo/Redo` allows you to select different stages of processing to revert to
+* `Extract` allows you to export the transformation steps in JSON format
+* `Apply` allows you to re-use a set of transformations from JSON format
+
+---
+class: center, middle
+
+# DEMO
+
+---
+# Summary
+
+OpenRefine has a lot of functionality:
+* simple interface for data cleaning
+* programmable interface for anything not built-in
+* reproducible processing workflows
+* lots of online examples and extensions
 
 ---
 # Thanks
