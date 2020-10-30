@@ -8,6 +8,9 @@
 * ["Data Cleaning with OpenRefine for Ecologists"](https://datacarpentry.org/OpenRefine-ecology-lesson/)
   - Data Carpentry Lesson on OpenRefine (Ecology data)
 
+* ["Introduction to OpenRefine"](https://arieldeardorff.github.io/OpenRefineWorkshop/index.html)
+  - online lesson on OpenRefine from Ariel Deardorff, using NLM Dietary Supplements data
+
 ## Useful Resources
 
 * [OpenRefine LibGuide](https://guides.library.illinois.edu/openrefine)

@@ -153,6 +153,7 @@ class: inverse, center, middle
 * data values might have typos and/or other errors
 * How do you detect and fix these errors?
 --
+
   1. directly edit the labels in Facet mode
   2. use 'Cluster' options to group similar category labels
 
