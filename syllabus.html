@@ -71,7 +71,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">OpenRefineIntro</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -124,8 +124,169 @@
 
 <div id="syllabus" class="section level1">
 
-<div id="section" class="section level2">
-<h2></h2>
+<div id="intro" class="section level2">
+<h2 class="hasAnchor">
+<a href="#intro" class="anchor"></a>Intro</h2>
+<ul>
+<li>What is OpenRefine? OpenRefine is a free, open-source tool for cleaning data:
+<ul>
+<li>Correcting errors by hand is easy for small datasets, but:
+<ul>
+<li>more tedious for larger datasets</li>
+<li>harder to find in larger datasets</li>
+<li>reproducing corrections to other datasets is challenging!</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>OpenRefine is NOT for:
+<ul>
+<li>very large datasets (e.g. &gt; 1 million rows)</li>
+<li>complicated calculations (e.g. numerical simulations involving tabular data)</li>
+<li>non-tabular data; though it can handle other forms of untidy data:
+<ul>
+<li>variables in rows</li>
+<li>multiple values in a single row or column</li>
+<li>values in multiple rows or columns)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Learning Outcomes By the end of the workshop, participants will be able to:
+<ul>
+<li>load and examine data in OpenRefine</li>
+<li>save and re-open OpenRefine projects</li>
+<li>use clustering and transforms to correct data errors</li>
+<li>export data cleaning steps as scripts</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="introduction-to-openrefine" class="section level2">
+<h2 class="hasAnchor">
+<a href="#introduction-to-openrefine" class="anchor"></a>Introduction to OpenRefine</h2>
+<ul>
+<li>Basic Workflow
+<ul>
+<li>Download from <a href="https://openrefine.org/download.html" class="uri">https://openrefine.org/download.html</a>
+</li>
+<li>OpenRefine runs in your web browser:
+<ul>
+<li>starting the application should open a browser window</li>
+<li>if not, navigate to <a href="http://127.0.0.1:3333/" class="uri">http://127.0.0.1:3333/</a> once the app is running</li>
+</ul>
+</li>
+<li>OpenRefine does <em>NOT</em> modify the original data</li>
+</ul>
+</li>
+<li>Workflow steps
+<ul>
+<li>load your data or an existing project</li>
+<li>do your data cleaning tasks</li>
+<li><strong>OpenRefine does not modify your data files!</strong></li>
+<li>Get work out by:
+<ul>
+<li>saving project</li>
+<li>exporting data</li>
+<li>exporting data cleaning script</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Importing Data
+<ul>
+<li>OpenRefine can import most tabular data formats:
+<ul>
+<li>tab-separated values, comma-separated values, custom separators</li>
+<li>excel spreadsheets (<code>.xls</code>, <code>.xlsx</code>)</li>
+<li>many others</li>
+</ul>
+</li>
+<li>check settings on import preview</li>
+</ul>
+</li>
+<li>Import Preview <img src="slides/import_preview.png" alt="Screenshot of ‘OpenRefine’ import screen, using the sample data from https://ndownloader.figshare.com/files/7823341, and showing both the tabular preview and the options for parsing the headers and delimiters.">
+</li>
+<li>Saving and Loading Projects <img src="slides/export_project.png" alt="Screenshot of ‘OpenRefine’, using the sample data from https://ndownloader.figshare.com/files/7823341, and exporting the OpenRefine project archive.">
+</li>
+<li>DEMO</li>
+<li>Explore Distributions <img src="slides/text_facet.png" alt="Screenshot of ‘OpenRefine’, using the sample data from https://ndownloader.figshare.com/files/7823341, and faceting the ‘yr’ column as text.">
+</li>
+<li>DEMO</li>
+</ul>
+</div>
+<div id="basic-error-correction" class="section level2">
+<h2 class="hasAnchor">
+<a href="#basic-error-correction" class="anchor"></a>Basic Error Correction</h2>
+<ul>
+<li>Categorical Variables
+<ul>
+<li>data values might have typos and/or other errors</li>
+<li>How do you detect and fix these errors?
+<ol>
+<li>directly edit the labels in Facet mode</li>
+<li>use ‘Cluster’ options to group similar category labels</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>DEMO</li>
+<li>Column Transformations
+<ul>
+<li>re-order / re-name columns</li>
+<li>merge or split columns (by certain separators) <img src="slides/edit_column.png" alt="Screenshot of ‘OpenRefine’, using the sample data from https://ndownloader.figshare.com/files/7823341, and showing the ‘Edit Column options’ when selecting the ‘scientificName’ column.">
+</li>
+</ul>
+</li>
+<li>Value Transformations
+<ul>
+<li>convert types</li>
+<li>common edits (converting case, removing whitespace, etc.)</li>
+<li>fill in empty cells if they represent repeated values from above</li>
+<li>generic scripting language (General Refine Expression Language)</li>
+</ul>
+</li>
+<li>DEMO</li>
+</ul>
+</div>
+<div id="saving-data-cleaning-steps" class="section level2">
+<h2 class="hasAnchor">
+<a href="#saving-data-cleaning-steps" class="anchor"></a>Saving Data Cleaning Steps</h2>
+<ul>
+<li>Reproducibility
+<ul>
+<li>OpenRefine records all data transformation steps</li>
+<li>
+<code>Undo/Redo</code> allows you to select different stages of processing to revert to</li>
+<li>
+<code>Extract</code> allows you to export the transformation steps in JSON format</li>
+<li>
+<code>Apply</code> allows you to re-use a set of transformations from JSON format</li>
+</ul>
+</li>
+<li>DEMO</li>
+<li>Summary OpenRefine has a lot of functionality:
+<ul>
+<li>simple interface for data cleaning</li>
+<li>syntax for doing data transformations</li>
+<li>reproducible processing workflows</li>
+<li>lots of online examples and extensions</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="thanks" class="section level2">
+<h2 class="hasAnchor">
+<a href="#thanks" class="anchor"></a>Thanks</h2>
+<ul>
+<li>Let me know what content you’d like to see</li>
+<li>Contact me for additional questions or consultation requests!</li>
+<li>Check back in on the libguide for more modules and contact info:
+<ul>
+<li><a href="https://guides.uflib.ufl.edu/reproducibility" class="uri">https://guides.uflib.ufl.edu/reproducibility</a></li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 
