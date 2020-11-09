@@ -3,8 +3,7 @@
 
 <!-- badges: start -->
 [![GitHub Actions pkgdown workflow](https://github.com/uf-repro/lesson-template/workflows/pkgdown/badge.svg)](https://github.com/uf-repro/lesson-template/actions?query=workflow%3Apkgdown)
-
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4263472.svg)](https://doi.org/10.5281/zenodo.4263472)
 <!-- badges: end -->
 
 ## Description
