@@ -13,6 +13,9 @@
 
 ## Useful Resources
 
+* [OpenRefine user manual](https://docs.openrefine.org/)
+  - Newly updated (2021-01-15) manual for OpenRefine 3.4.1
+
 * [OpenRefine LibGuide](https://guides.library.illinois.edu/openrefine)
   - Extensive Guide to the features of OpenRefine
 
