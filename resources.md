@@ -16,11 +16,11 @@
 * [OpenRefine user manual](https://docs.openrefine.org/)
   - Newly updated (2021-01-15) manual for OpenRefine 3.4.1
 
+* [General Refine Expression Language (GREL)](https://docs.openrefine.org/manual/expressions/#grel-general-refine-expression-language)
+  - Specific section of the documentation on the GREL syntax for manipulating data in OpenRefine
+
 * [OpenRefine LibGuide](https://guides.library.illinois.edu/openrefine)
   - Extensive Guide to the features of OpenRefine
-
-* [General Refine Expression Language (GREL)](https://github.com/OpenRefine/OpenRefine/wiki/General-Refine-Expression-Language)
-  - Documentation on the GREL syntax for manipulating data in OpenRefine
   
 * [OpenRefine Recipes](https://github.com/OpenRefine/OpenRefine/wiki/Recipes)
   - example code for doing specific tasks
