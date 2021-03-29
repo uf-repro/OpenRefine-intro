@@ -1,0 +1,64 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+```{r, include = FALSE}
+
+lesson_title <- "Data Cleaning with OpenRefine"
+lesson_description <- "OpenRefine (formerly Google Refine) is a powerful free and open source tool for data cleaning, enabling you to correct errors in the data, and make sure that the values and formatting are consistent. In addition, OpenRefine records your processing steps, enabling you to apply the same cleaning procedure to other data, and enhancing the reproducibility of your analysis. This workshop will teach you to use OpenRefine to clean and format data and automatically track any changes that you make."
+lesson_keywords <- c("Open Educational Resources",
+                     "Research Support Skills",
+                     "Data Cleaning",
+                     "Research Data Management", 
+                     "Data", 
+                     "OpenRefine", 
+                     "Workshop")
+
+desc::desc_set(Title = lesson_title, 
+               Description = lesson_description)
+
+zenodo_json <- jsonlite::read_json(".zenodo.json")
+zenodo_json$title <- lesson_title
+zenodo_json$description <- lesson_description
+zenodo_json$keywords <- as.list(lesson_keywords)
+jsonlite::write_json(zenodo_json, ".zenodo.json", 
+                     auto_unbox = TRUE, pretty = TRUE)
+```
+
+# `r lesson_title`
+
+<!-- badges: start -->
+[![GitHub Actions pkgdown workflow](https://github.com/uf-repro/lesson-template/workflows/pkgdown/badge.svg)](https://github.com/uf-repro/lesson-template/actions?query=workflow%3Apkgdown)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4263472.svg)](https://doi.org/10.5281/zenodo.4263472)
+
+<!-- badges: end -->
+
+## Description
+
+`r lesson_description`
+
+## Learning Outcomes
+
+```{r, include = FALSE}
+learning_outcomes <- c("load and examine data in OpenRefine", 
+                       "save and re-open OpenRefine projects", 
+                       "use clustering and transforms to correct data errors", 
+                       "export data cleaning steps as scripts")
+outcomes_text <- paste0("* ", learning_outcomes, collapse = "\n")
+desc::desc_set("learningOutcomes", outcomes_text)
+```
+
+By the end of the workshop, participants will be able to:
+
+`r outcomes_text`

@@ -1,6 +1,6 @@
 Package: OpenRefineIntro
 Title: Data Cleaning with OpenRefine
-Version: 1.0.1
+Version: 1.1.0
 Authors@R: 
     person(given = "Hao",
            family = "Ye",
@@ -18,3 +18,7 @@ Imports:
     xaringan,
     xaringanthemer
 URL: https://github.com/uf-repro/OpenRefine-intro
+learningOutcomes: * load and examine data in OpenRefine
+ * save and re-open OpenRefine projects
+ * use clustering and transforms to correct data errors
+ * export data cleaning steps as scripts
