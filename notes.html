@@ -57,6 +57,7 @@
 
 
 
+
   
 
   
@@ -79,16 +80,13 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">OpenRefineIntro</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.0</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a></a>
-</li>
-<li>
   <a></a>
 </li>
       </ul>
@@ -132,33 +130,23 @@
 
 <div id="syllabus" class="section level1">
 
-<p>Hao Ye Health Science Center Libraries, University of Florida (updated: 2021-02-19)</p>
+<p>Hao Ye Health Science Center Libraries, University of Florida (updated: 2021-03-29)</p>
 <div id="intro" class="section level2">
 <h2 class="hasAnchor">
 <a href="#intro" class="anchor"></a>Intro</h2>
 <ul>
-<li>What is OpenRefine? OpenRefine is a free, open-source tool for cleaning data:
+<li>What is OpenRefine? OpenRefine is a free, open-source tool for cleaning data. Correcting errors by hand is easy for small datasets, but:
 <ul>
-<li>Correcting errors by hand is easy for small datasets, but:
-<ul>
-<li>more tedious for larger datasets</li>
-<li>harder to find in larger datasets</li>
-<li>reproducing corrections to other datasets is challenging!</li>
-</ul>
-</li>
+<li>is tedious for larger datasets</li>
+<li>spotting inconsistencies is harder in larger datasets</li>
+<li>reproducing the same set of changes in other datasets is challenging!</li>
 </ul>
 </li>
 <li>OpenRefine is NOT for:
 <ul>
 <li>very large datasets (e.g. &gt; 1 million rows)</li>
-<li>complicated calculations (e.g. numerical simulations involving tabular data)</li>
-<li>non-tabular data; though it can handle other forms of untidy data:
-<ul>
-<li>variables in rows</li>
-<li>multiple values in a single row or column</li>
-<li>values in multiple rows or columns)</li>
-</ul>
-</li>
+<li>complicated calculations (e.g. performing numerical simulations)</li>
+<li>non-tabular data (but there are features to help with some basic un“tidy”ness)</li>
 </ul>
 </li>
 <li>Learning Outcomes By the end of the workshop, participants will be able to:
@@ -178,19 +166,18 @@
 <li>Basic Workflow
 <ul>
 <li>Download from https://openrefine.org/download.html</li>
-<li>OpenRefine runs in your web browser:
+<li>OpenRefine runs in your web browser
 <ul>
 <li>starting the application should open a browser window</li>
 <li>if not, navigate to http://127.0.0.1:3333/ once the app is running</li>
 </ul>
 </li>
-<li>OpenRefine does <em>NOT</em> modify the original data</li>
 </ul>
 </li>
-<li>Workflow steps
+<li>Workflow
 <ul>
 <li>load your data or an existing project</li>
-<li>do your data cleaning tasks</li>
+<li>do your data cleaning</li>
 <li><strong>OpenRefine does not modify your data files!</strong></li>
 <li>Get work out by:
 <ul>
@@ -210,10 +197,21 @@
 <li>many others</li>
 </ul>
 </li>
-<li>check settings on import preview</li>
 </ul>
 </li>
 <li>Import Preview <img src="import_preview.png" alt="Screenshot of ‘OpenRefine’ import screen, using the sample data from https://ndownloader.figshare.com/files/7823341, and showing both the tabular preview and the options for parsing the headers and delimiters.">
+</li>
+<li>Import Settings
+<ul>
+<li>Check the preview to see if the data file is being parsed correctly!
+<ul>
+<li>adjust delimiters</li>
+<li>number of lines to skip in the header</li>
+<li>column names?</li>
+<li>other common parsing</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>Saving and Loading Projects <img src="export_project.png" alt="Screenshot of ‘OpenRefine’, using the sample data from https://ndownloader.figshare.com/files/7823341, and exporting the OpenRefine project archive.">
 </li>
@@ -231,10 +229,10 @@
 <ul>
 <li>data values might have typos and/or other errors</li>
 <li>How do you detect and fix these errors?
-<ol style="list-style-type: decimal">
+<ul>
 <li>directly edit the labels in Facet mode</li>
 <li>use ‘Cluster’ options to group similar category labels</li>
-</ol>
+</ul>
 </li>
 </ul>
 </li>
@@ -246,12 +244,12 @@
 </li>
 </ul>
 </li>
-<li>Value Transformations
+<li>Value Transformations built-in transforms
 <ul>
-<li>convert types</li>
-<li>common edits (converting case, removing whitespace, etc.)</li>
-<li>fill in empty cells if they represent repeated values from above</li>
-<li>generic scripting language (General Refine Expression Language)</li>
+<li>convert types (e.g. text to date)</li>
+<li>basic edits (converting case, removing whitespace, etc.)</li>
+<li>fill in empty cells if they represent repeated values from above <strong>ALSO</strong>, programmable via <a href="https://docs.openrefine.org/manual/expressions/#grel-general-refine-expression-language" class="external-link">generic scripting language (General Refine Expression Language)</a>
+</li>
 </ul>
 </li>
 <li>DEMO</li>
@@ -310,7 +308,7 @@
 </div>
 
 <div class="pkgdown">
-  <p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9000.</p></p>
+  <p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9001.</p></p>
 </div>
 
       </footer>

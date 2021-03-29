@@ -17,26 +17,26 @@ class: inverse, center, middle
 # Data Cleaning with OpenRefine
 ### Hao Ye
 ### Health Science Center Libraries, University of Florida
-### (updated: 2021-02-19)
+### (updated: 2021-03-29)
 
 ---
 # What is OpenRefine?
 
-OpenRefine is a free, open-source tool for cleaning data:
-* Correcting errors by hand is easy for small datasets, but:
-  - more tedious for larger datasets
-  - harder to find in larger datasets
-  - reproducing corrections to other datasets is challenging!
+OpenRefine is a free, open-source tool for cleaning data.
+
+--
+
+Correcting errors by hand is easy for small datasets, but:
+* is tedious for larger datasets
+* spotting inconsistencies is harder in larger datasets
+* reproducing the same set of changes in other datasets is challenging!
 
 ---
 # OpenRefine is NOT for:
 
 * very large datasets (e.g. &gt; 1 million rows)
-* complicated calculations (e.g. numerical simulations involving tabular data)
-* non-tabular data; though it can handle other forms of untidy data: 
-  - variables in rows
-  - multiple values in a single row or column
-  - values in multiple rows or columns)
+* complicated calculations (e.g. performing numerical simulations)
+* non-tabular data (but there are features to help with some basic un"tidy"ness)
 
 ---
 # Learning Outcomes
@@ -56,16 +56,15 @@ class: inverse, center, middle
 # Basic Workflow
 
 * Download from https://openrefine.org/download.html
-* OpenRefine runs in your web browser:
+* OpenRefine runs in your web browser
   - starting the application should open a browser window
   - if not, navigate to http://127.0.0.1:3333/ once the app is running
-* OpenRefine does *NOT* modify the original data
 
 ---
-# Workflow steps
+# Workflow
 
 * load your data or an existing project
-* do your data cleaning tasks
+* do your data cleaning
 * **OpenRefine does not modify your data files!**
 * Get work out by:
   - saving project
@@ -79,13 +78,21 @@ class: inverse, center, middle
   - tab-separated values, comma-separated values, custom separators
   - excel spreadsheets (`.xls`, `.xlsx`)
   - many others
-* check settings on import preview
 
 ---
 # Import Preview
 
 ![Screenshot of 'OpenRefine' import screen, using the sample data from https://ndownloader.figshare.com/files/7823341, and showing both the tabular preview and the options for parsing the headers and delimiters.](import_preview.png)
 
+---
+# Import Settings
+
+* Check the preview to see if the data file is being parsed correctly!
+  - adjust delimiters
+  - number of lines to skip in the header
+  - column names?
+  - other common parsing
+  
 ---
 # Saving and Loading Projects
 
@@ -118,8 +125,8 @@ class: inverse, center, middle
 * How do you detect and fix these errors?
 --
 
-  1. directly edit the labels in Facet mode
-  2. use 'Cluster' options to group similar category labels
+  - directly edit the labels in Facet mode
+  - use 'Cluster' options to group similar category labels
 
 ---
 class: center, middle
@@ -137,10 +144,12 @@ class: center, middle
 ---
 # Value Transformations
 
-* convert types
-* common edits (converting case, removing whitespace, etc.)
+built-in transforms
+* convert types (e.g. text to date)
+* basic edits (converting case, removing whitespace, etc.)
 * fill in empty cells if they represent repeated values from above
-* generic scripting language (General Refine Expression Language)
+
+**ALSO**, programmable via [generic scripting language (General Refine Expression Language)](https://docs.openrefine.org/manual/expressions/#grel-general-refine-expression-language)
 
 ---
 class: center, middle
