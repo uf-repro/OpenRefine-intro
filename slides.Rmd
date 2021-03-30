@@ -33,12 +33,12 @@ style_mono_accent(
   extra_css = list("p" = list("margin-block-start" = "0.5em", 
                               "margin-block-end" = "0.5em"), 
                    "ul" = list("margin-block-start" = "0.5em", 
-                              "margin-block-end" = "0.5em"), 
+                               "margin-block-end" = "0.5em"), 
                    "li" = list("margin-block-start" = "0.5em", 
-                              "margin-block-end" = "0.5em"), 
+                               "margin-block-end" = "0.5em"), 
                    "pre" = list("margin-top" = "0.5em", 
-                              "margin-bottom" = "0.5em"), 
-                   ".caption" = list("display" = "none")), 
+                                "margin-bottom" = "0.5em"), 
+                   ".small" = list("font-size" = "80%")), 
   link_color = "#339944"
 )
 ```
@@ -169,13 +169,13 @@ class: center, middle
 ---
 # Clustering Methods
 
-* key collision
+.small[* key collision
   + `fingerprint` - checks for basic string manipulation differences (spaces, accents, word order)
   + `n-gram fingerprint` - checks for clusters with the same set of n-grams (n-letter sequences)
   + remaining choices are phonetic (and for different languages)
 * nearest neighbor
   + `levenshtein` - maximum distance between labels with sequences of at least `Block Chars` are identical
-  + `ppm` - based on kolmogorov complexity of the strings
+  + `ppm` - based on kolmogorov complexity of the strings]
 
 ---
 # Column Transformations
