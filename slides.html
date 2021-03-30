@@ -17,7 +17,7 @@ class: inverse, center, middle
 # Data Cleaning with OpenRefine
 ### Hao Ye
 ### Health Science Center Libraries, University of Florida
-### (updated: 2021-03-29)
+### (updated: 2021-03-30)
 
 ---
 # What is OpenRefine?
@@ -132,6 +132,17 @@ class: inverse, center, middle
 class: center, middle
 
 # DEMO
+
+---
+# Clustering Methods
+
+* key collision
+  + `fingerprint` - checks for basic string manipulation differences (spaces, accents, word order)
+  + `n-gram fingerprint` - checks for clusters with the same set of n-grams (n-letter sequences)
+  + remaining choices are phonetic (and for different languages)
+* nearest neighbor
+  + `levenshtein` - maximum distance between labels with sequences of at least `Block Chars` are identical
+  + `ppm` - based on kolmogorov complexity of the strings
 
 ---
 # Column Transformations
