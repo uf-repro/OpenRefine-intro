@@ -8,7 +8,6 @@ output:
     lib_dir: libs
     css: xaringan-themer.css
     seal: false
-    fig_caption: false
     nature:
       highlightStyle: github
       highlightLines: true
@@ -110,7 +109,7 @@ class: inverse, center, middle
 ---
 # Import Preview
 
-```{r, echo = FALSE, fig.cap = "Screenshot of 'OpenRefine' import screen, using the sample data from https://ndownloader.figshare.com/files/7823341, and showing both the tabular preview and the options for parsing the headers and delimiters."}
+```{r, echo = FALSE, fig.alt = "Screenshot of 'OpenRefine' import screen, using the sample data from https://ndownloader.figshare.com/files/7823341, and showing both the tabular preview and the options for parsing the headers and delimiters."}
 knitr::include_graphics("import_preview.png")
 ```
 
@@ -133,7 +132,7 @@ knitr::include_graphics("import_preview.png")
 ---
 # Projects Preview
 
-```{r, echo = FALSE, fig.cap = "Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and exporting the OpenRefine project archive."}
+```{r, echo = FALSE, fig.alt = "Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and exporting the OpenRefine project archive."}
 knitr::include_graphics("export_project.png")
 ```
 
@@ -153,7 +152,7 @@ class: center, middle
 ---
 # Facet Preview
 
-```{r, echo = FALSE, fig.cap = "Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and faceting the 'yr' column as text."}
+```{r, echo = FALSE, fig.alt = "Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and faceting the 'yr' column as text."}
 knitr::include_graphics("text_facet.png")
 ```
 
@@ -199,7 +198,7 @@ class: center, middle
 * re-order / re-name columns
 * merge or split columns (by certain separators)
 
-```{r, echo = FALSE, fig.cap = "Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and showing the 'Edit Column options' when selecting the 'scientificName' column."}
+```{r, echo = FALSE, fig.alt = "Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and showing the 'Edit Column options' when selecting the 'scientificName' column."}
 knitr::include_graphics("edit_column.png")
 ```
 
