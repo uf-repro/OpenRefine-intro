@@ -17,26 +17,27 @@ class: inverse, center, middle
 # Data Cleaning with OpenRefine
 ### Hao Ye
 ### Health Science Center Libraries, University of Florida
-### (updated: 2021-03-30)
+### (updated: 2021-06-15)
 
 ---
 # What is OpenRefine?
 
-OpenRefine is a free, open-source tool for cleaning data.
+OpenRefine is a free open-source tool to **automatically** and **reproducibly** clean datasets.
 
 --
 
-Correcting errors by hand is easy for small datasets, but:
+Finding and fixing errors is easy in small datasets, but:
 * is tedious for larger datasets
 * spotting inconsistencies is harder in larger datasets
-* reproducing the same set of changes in other datasets is challenging!
+* how do you reproduce the same set fixes to new data?
 
 ---
 # OpenRefine is NOT for:
 
 * very large datasets (e.g. &gt; 1 million rows)
 * complicated calculations (e.g. performing numerical simulations)
-* non-tabular data (but there are features to help with some basic un"tidy"ness)
+* non-tabular data
+  - but there are features to help with some basic un"tidy"ness
 
 ---
 # Learning Outcomes
@@ -64,8 +65,8 @@ class: inverse, center, middle
 # Workflow
 
 * load your data or an existing project
-* do your data cleaning
-* **OpenRefine does not modify your data files!**
+* do your data cleaning  
+**OpenRefine does not modify your data files!**
 * Get work out by:
   - saving project
   - exporting data 
@@ -92,9 +93,16 @@ class: inverse, center, middle
   - number of lines to skip in the header
   - column names?
   - other common parsing
-  
+
 ---
 # Saving and Loading Projects
+
+* OpenRefine has its own file format for saving and loading projects
+  - do data cleaning across multiple sessions
+  - no need to re-import data
+  
+---
+# Projects Preview
 
 ![Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and exporting the OpenRefine project archive.](export_project.png)
 
@@ -104,7 +112,15 @@ class: center, middle
 # DEMO
 
 ---
-# Explore Distributions
+# Explore Data Distributions
+
+* Facets are a way to examine how values are distributed in your dataset
+  - facets apply to a single column
+  - different types of data require different facets
+  - visualization may surface issues to be fixed (typos, outliers, etc.)
+
+---
+# Facet Preview
 
 ![Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and faceting the 'yr' column as text.](text_facet.png)
 

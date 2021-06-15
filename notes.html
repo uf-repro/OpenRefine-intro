@@ -57,7 +57,6 @@
 
 
 
-
   
 
   
@@ -130,23 +129,27 @@
 
 <div id="syllabus" class="section level1">
 
-<p>Hao Ye Health Science Center Libraries, University of Florida (updated: 2021-03-30)</p>
+<p>Hao Ye Health Science Center Libraries, University of Florida (updated: 2021-06-15)</p>
 <div id="intro" class="section level2">
 <h2 class="hasAnchor">
-<a href="#intro" class="anchor"></a>Intro</h2>
+<a href="#intro" class="anchor" aria-hidden="true"></a>Intro</h2>
 <ul>
-<li>What is OpenRefine? OpenRefine is a free, open-source tool for cleaning data. Correcting errors by hand is easy for small datasets, but:
+<li>What is OpenRefine? OpenRefine is a free open-source tool to <strong>automatically</strong> and <strong>reproducibly</strong> clean datasets. Finding and fixing errors is easy in small datasets, but:
 <ul>
 <li>is tedious for larger datasets</li>
 <li>spotting inconsistencies is harder in larger datasets</li>
-<li>reproducing the same set of changes in other datasets is challenging!</li>
+<li>how do you reproduce the same set fixes to new data?</li>
 </ul>
 </li>
 <li>OpenRefine is NOT for:
 <ul>
 <li>very large datasets (e.g. &gt; 1 million rows)</li>
 <li>complicated calculations (e.g. performing numerical simulations)</li>
-<li>non-tabular data (but there are features to help with some basic un“tidy”ness)</li>
+<li>non-tabular data
+<ul>
+<li>but there are features to help with some basic un“tidy”ness</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Learning Outcomes By the end of the workshop, participants will be able to:
@@ -161,15 +164,16 @@
 </div>
 <div id="introduction-to-openrefine" class="section level2">
 <h2 class="hasAnchor">
-<a href="#introduction-to-openrefine" class="anchor"></a>Introduction to OpenRefine</h2>
+<a href="#introduction-to-openrefine" class="anchor" aria-hidden="true"></a>Introduction to OpenRefine</h2>
 <ul>
 <li>Basic Workflow
 <ul>
-<li>Download from https://openrefine.org/download.html</li>
+<li>Download from <a href="https://openrefine.org/download.html" class="external-link uri">https://openrefine.org/download.html</a>
+</li>
 <li>OpenRefine runs in your web browser
 <ul>
 <li>starting the application should open a browser window</li>
-<li>if not, navigate to http://127.0.0.1:3333/ once the app is running</li>
+<li>if not, navigate to <a href="http://127.0.0.1:3333/" class="external-link uri">http://127.0.0.1:3333/</a> once the app is running</li>
 </ul>
 </li>
 </ul>
@@ -177,8 +181,8 @@
 <li>Workflow
 <ul>
 <li>load your data or an existing project</li>
-<li>do your data cleaning</li>
-<li><strong>OpenRefine does not modify your data files!</strong></li>
+<li>do your data cleaning<br><strong>OpenRefine does not modify your data files!</strong>
+</li>
 <li>Get work out by:
 <ul>
 <li>saving project</li>
@@ -213,17 +217,38 @@
 </li>
 </ul>
 </li>
-<li>Saving and Loading Projects <img src="export_project.png" alt="Screenshot of ‘OpenRefine’, using the sample data from https://ndownloader.figshare.com/files/7823341, and exporting the OpenRefine project archive.">
+<li>Saving and Loading Projects
+<ul>
+<li>OpenRefine has its own file format for saving and loading projects
+<ul>
+<li>do data cleaning across multiple sessions</li>
+<li>no need to re-import data</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Projects Preview <img src="export_project.png" alt="Screenshot of ‘OpenRefine’, using the sample data from https://ndownloader.figshare.com/files/7823341, and exporting the OpenRefine project archive.">
 </li>
 <li>DEMO</li>
-<li>Explore Distributions <img src="text_facet.png" alt="Screenshot of ‘OpenRefine’, using the sample data from https://ndownloader.figshare.com/files/7823341, and faceting the ‘yr’ column as text.">
+<li>Explore Data Distributions
+<ul>
+<li>Facets are a way to examine how values are distributed in your dataset
+<ul>
+<li>facets apply to a single column</li>
+<li>different types of data require different facets</li>
+<li>visualization may surface issues to be fixed (typos, outliers, etc.)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Facet Preview <img src="text_facet.png" alt="Screenshot of ‘OpenRefine’, using the sample data from https://ndownloader.figshare.com/files/7823341, and faceting the ‘yr’ column as text.">
 </li>
 <li>DEMO</li>
 </ul>
 </div>
 <div id="basic-error-correction" class="section level2">
 <h2 class="hasAnchor">
-<a href="#basic-error-correction" class="anchor"></a>Basic Error Correction</h2>
+<a href="#basic-error-correction" class="anchor" aria-hidden="true"></a>Basic Error Correction</h2>
 <ul>
 <li>Categorical Variables
 <ul>
@@ -274,7 +299,7 @@
 </div>
 <div id="saving-data-cleaning-steps" class="section level2">
 <h2 class="hasAnchor">
-<a href="#saving-data-cleaning-steps" class="anchor"></a>Saving Data Cleaning Steps</h2>
+<a href="#saving-data-cleaning-steps" class="anchor" aria-hidden="true"></a>Saving Data Cleaning Steps</h2>
 <ul>
 <li>Reproducibility
 <ul>
@@ -300,7 +325,7 @@
 <li>Contact me for additional questions or consultation requests!</li>
 <li>Check back in on the libguide for more modules and contact info:
 <ul>
-<li>https://guides.uflib.ufl.edu/reproducibility</li>
+<li><a href="https://guides.uflib.ufl.edu/reproducibility" class="external-link uri">https://guides.uflib.ufl.edu/reproducibility</a></li>
 </ul>
 </li>
 </ul>
