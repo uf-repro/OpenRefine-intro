@@ -17,27 +17,27 @@ class: inverse, center, middle
 # Data Cleaning with OpenRefine
 ### Hao Ye
 ### Health Science Center Libraries, University of Florida
-### (updated: 2021-06-15)
+### (updated: 2021-10-12)
 
 ---
 # What is OpenRefine?
 
-OpenRefine is a free open-source tool to **automatically** and **reproducibly** clean datasets.
+OpenRefine is a free open-source tool to clean data in an **automatic** and **reproducible** way.
 
 --
 
-Finding and fixing errors is easy in small datasets, but:
+Finding/fixing errors is easy for small data, but:
 * is tedious for larger datasets
 * spotting inconsistencies is harder in larger datasets
-* how do you reproduce the same set fixes to new data?
+* how do you apply the **same** corrections to new data?
 
 ---
 # OpenRefine is NOT for:
 
-* very large datasets (e.g. &gt; 1 million rows)
+* very large datasets (&gt; 1 million rows)
 * complicated calculations (e.g. performing numerical simulations)
 * non-tabular data
-  - but there are features to help with some basic un"tidy"ness
+  - there are some features to help with basic un"tidy"ness
 
 ---
 # Learning Outcomes
@@ -64,7 +64,7 @@ class: inverse, center, middle
 ---
 # Workflow
 
-* load your data or an existing project
+* import your data or load an existing project
 * do your data cleaning  
 **OpenRefine does not modify your data files!**
 * Get work out by:
@@ -114,10 +114,10 @@ class: center, middle
 ---
 # Explore Data Distributions
 
-* Facets are a way to examine how values are distributed in your dataset
+* Use facets to examine how values are distributed in your data
   - facets apply to a single column
   - different types of data require different facets
-  - visualization may surface issues to be fixed (typos, outliers, etc.)
+  - visualization may reveal issues to be fixed (typos, outliers, etc.)
 
 ---
 # Facet Preview
@@ -141,8 +141,8 @@ class: inverse, center, middle
 * How do you detect and fix these errors?
 --
 
-  - directly edit the labels in Facet mode
-  - use 'Cluster' options to group similar category labels
+  - edit the labels directly in Facet mode
+  - use 'Cluster' options to find groups of similar labels
 
 ---
 class: center, middle
@@ -171,12 +171,13 @@ class: center, middle
 ---
 # Value Transformations
 
-built-in transforms
-* convert types (e.g. text to date)
-* basic edits (converting case, removing whitespace, etc.)
-* fill in empty cells if they represent repeated values from above
+1. built-in transforms:
+  * convert types (e.g. text to date)
+  * basic edits (converting case, removing whitespace, etc.)
+  * fill in empty cells if they represent repeated values from above
 
-**ALSO**, programmable via [generic scripting language (General Refine Expression Language)](https://docs.openrefine.org/manual/expressions/#grel-general-refine-expression-language)
+2. custom transforms:
+  * programmable via [generic scripting language (General Refine Expression Language)](https://docs.openrefine.org/manual/expressions/#grel-general-refine-expression-language)
 
 ---
 class: center, middle
