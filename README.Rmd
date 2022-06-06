@@ -51,9 +51,6 @@ learning_outcomes <- c("load and examine data in OpenRefine",
                        "export data cleaning steps as scripts")
 outcomes_text <- paste0("* ", learning_outcomes, collapse = "\n")
 desc::desc_set("learningOutcomes", outcomes_text)
-abstract_text <- paste0(lesson_description, "\\n\\n", 
-                        "Learning Outcomes: \\n", 
-                        paste0("* ", learning_outcomes, collapse = "\\n"))
 ```
 
 By the end of the workshop, participants will be able to:
@@ -61,6 +58,5 @@ By the end of the workshop, participants will be able to:
 `r outcomes_text`
 
 ```{r make cff file, include = FALSE}
-cffr::cff_write(keys = list("type" = "lesson", 
-                            "abstract" = abstract_text))
+cffr::cff_write(keys = list("type" = "lesson"))
 ```
