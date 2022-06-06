@@ -27,13 +27,7 @@ lesson_keywords <- c("Open Educational Resources",
 
 desc::desc_set(Title = lesson_title, 
                Description = lesson_description)
-
-zenodo_json <- jsonlite::read_json(".zenodo.json")
-zenodo_json$title <- lesson_title
-zenodo_json$description <- lesson_description
-zenodo_json$keywords <- as.list(lesson_keywords)
-jsonlite::write_json(zenodo_json, ".zenodo.json", 
-                     auto_unbox = TRUE, pretty = TRUE)
+desc::desc_set("X-schema.org-keywords", paste(lesson_keywords, collapse = ", "))
 ```
 
 # `r lesson_title`
@@ -57,8 +51,16 @@ learning_outcomes <- c("load and examine data in OpenRefine",
                        "export data cleaning steps as scripts")
 outcomes_text <- paste0("* ", learning_outcomes, collapse = "\n")
 desc::desc_set("learningOutcomes", outcomes_text)
+abstract_text <- paste0(lesson_description, "\\n\\n", 
+                        "Learning Outcomes: \\n", 
+                        paste0("* ", learning_outcomes, collapse = "\\n"))
 ```
 
 By the end of the workshop, participants will be able to:
 
 `r outcomes_text`
+
+```{r make cff file, include = FALSE}
+cffr::cff_write(keys = list("type" = "lesson", 
+                            "abstract" = abstract_text))
+```

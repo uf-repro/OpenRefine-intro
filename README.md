@@ -25,7 +25,7 @@ and format data and automatically track any changes that you make.
 
 By the end of the workshop, participants will be able to:
 
-  - load and examine data in OpenRefine
-  - save and re-open OpenRefine projects
-  - use clustering and transforms to correct data errors
-  - export data cleaning steps as scripts
+-   load and examine data in OpenRefine
+-   save and re-open OpenRefine projects
+-   use clustering and transforms to correct data errors
+-   export data cleaning steps as scripts
