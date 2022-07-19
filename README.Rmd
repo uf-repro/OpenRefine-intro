@@ -24,7 +24,7 @@ lesson_keywords <- c("Open Educational Resources",
                      "Data", 
                      "OpenRefine", 
                      "Workshop")
-lesson_version <- "1.1.1"
+lesson_version <- "1.1.2"
 
 folder_name <- basename(usethis::proj_get())
 package_name <- gsub("-", ".", folder_name)
