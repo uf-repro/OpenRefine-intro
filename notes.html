@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">OpenRefine.intro</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.1.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.1.4</span>
       </span>
     </div>
 
@@ -59,20 +59,20 @@
     </div>
 
 <div id="syllabus" class="section level1">
-<p>Hao Ye Health Science Center Libraries, University of Florida (updated: 2022-07-19)</p>
+<p>Hao Ye Health Science Center Libraries, University of Florida (updated: 2022-09-26)</p>
 <div class="section level2">
 <h2 id="intro">Intro<a class="anchor" aria-label="anchor" href="#intro"></a></h2>
-<ul><li>What is OpenRefine? OpenRefine is a free open-source tool to clean data in an <strong>automatic</strong> and <strong>reproducible</strong> way. Finding/fixing errors is easy for small data, but:<ul><li>is tedious for larger datasets</li>
-<li>spotting inconsistencies is harder in larger datasets</li>
-<li>how do you apply the <strong>same</strong> corrections to new data?</li>
+<ul><li>What is OpenRefine? OpenRefine is a free open-source tool to clean data in a <strong>scalable</strong> and <strong>reproducible</strong> way. Finding/fixing errors is OK for small data, but:<ul><li>spotting inconsistencies is harder in larger datasets</li>
+<li>applying corrections identically to larger datasets is hard!</li>
+<li>how do you remember and apply the <strong>same</strong> corrections to new data?</li>
 </ul></li>
 <li>OpenRefine is NOT for:<ul><li>very large datasets (&gt; 1 million rows)</li>
 <li>complicated calculations (e.g. performing numerical simulations)</li>
-<li>non-tabular data<ul><li>there are some features to help with basic un“tidy”ness</li></ul></li>
+<li>non-tabular data<ul><li>BUT there are some features to help with basic un“tidy”ness</li></ul></li>
 </ul></li>
 <li>Learning Outcomes By the end of the workshop, participants will be able to:<ul><li>load and examine data in OpenRefine</li>
 <li>save and re-open OpenRefine projects</li>
-<li>use clustering and transforms to correct data errors</li>
+<li>use clustering and transforms to identify and correct data errors</li>
 <li>export data cleaning steps as scripts</li>
 </ul></li>
 </ul></div>
@@ -84,10 +84,10 @@
 <li>if not, navigate to <a href="http://127.0.0.1:3333/" class="external-link uri">http://127.0.0.1:3333/</a> once the app is running</li>
 </ul></li>
 </ul></li>
-<li>Workflow<ul><li>import your data or load an existing project</li>
+<li>Workflow<ul><li>import from a data file or load an existing project</li>
 <li>do your data cleaning<br><strong>OpenRefine does not modify your data files!</strong>
 </li>
-<li>Get work out by:<ul><li>saving project</li>
+<li>Get work out by (one or more of):<ul><li>saving project</li>
 <li>exporting data</li>
 <li>exporting data cleaning script</li>
 </ul></li>
@@ -96,29 +96,30 @@
 <li>excel spreadsheets (<code>.xls</code>, <code>.xlsx</code>)</li>
 <li>many others</li>
 </ul></li></ul></li>
-<li>Import Preview <img src="import_preview.png" title="Screenshot of 'OpenRefine' import screen, using the sample data from https://ndownloader.figshare.com/files/7823341, and showing both the tabular preview and the options for parsing the headers and delimiters." alt="Screenshot of 'OpenRefine' import screen, using the sample data from https://ndownloader.figshare.com/files/7823341, and showing both the tabular preview and the options for parsing the headers and delimiters."></li>
+<li>Import Preview <img src="import_preview.png" alt="Screenshot of 'OpenRefine' import screen, using the sample data from https://ndownloader.figshare.com/files/7823341, and showing both the tabular preview and the options for parsing the headers and delimiters."></li>
 <li>Import Settings<ul><li>Check the preview to see if the data file is being parsed correctly!<ul><li>adjust delimiters</li>
 <li>number of lines to skip in the header</li>
 <li>column names?</li>
 <li>other common parsing</li>
 </ul></li></ul></li>
-<li>Saving and Loading Projects<ul><li>OpenRefine has its own file format for saving and loading projects<ul><li>do data cleaning across multiple sessions</li>
-<li>no need to re-import data</li>
-</ul></li></ul></li>
-<li>Projects Preview <img src="export_project.png" title="Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and exporting the OpenRefine project archive." alt="Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and exporting the OpenRefine project archive."></li>
+<li>Saving and Loading Projects<ul><li>OpenRefine has its own file format for saving and loading projects</li>
+<li>This lets you do data cleaning across multiple sessions, saving progress<ul><li>no need to re-import data</li></ul></li>
+</ul></li>
+<li>Projects Preview <img src="export_project.png" alt="Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and exporting the OpenRefine project archive."></li>
 <li>DEMO</li>
-<li>Explore Data Distributions<ul><li>Use facets to examine how values are distributed in your data<ul><li>facets apply to a single column</li>
+<li>Explore Data Distributions<ul><li>Use facets to examine how values are distributed in your data<ul><li>facets apply to one OR multiple columns</li>
 <li>different types of data require different facets</li>
 <li>visualization may reveal issues to be fixed (typos, outliers, etc.)</li>
 </ul></li></ul></li>
-<li>Facet Preview <img src="text_facet.png" title="Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and faceting the 'yr' column as text." alt="Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and faceting the 'yr' column as text."></li>
+<li>Facet Preview <img src="text_facet.png" alt="Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and faceting the 'yr' column as text."></li>
 <li>DEMO</li>
 </ul></div>
 <div class="section level2">
 <h2 id="basic-error-correction">Basic Error Correction<a class="anchor" aria-label="anchor" href="#basic-error-correction"></a></h2>
-<ul><li>Categorical Variables<ul><li>data values might have typos and/or other errors</li>
+<ul><li>Categorical Variables<ul><li>data values may have typos and/or errors</li>
 <li>How do you detect and fix these errors?<ul><li>edit the labels directly in Facet mode</li>
-<li>use ‘Cluster’ options to find groups of similar labels</li>
+<li>use ‘Cluster’ options to find groups of similar labels<br>
+(maybe these should be the same label?)</li>
 </ul></li>
 </ul></li>
 <li>DEMO</li>
@@ -134,27 +135,27 @@
 </ul></li>
 </ul></li>
 <li>Column Transformations<ul><li>re-order / re-name columns</li>
-<li>merge or split columns (by certain separators) <img src="edit_column.png" title="Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and showing the 'Edit Column options' when selecting the 'scientificName' column." alt="Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and showing the 'Edit Column options' when selecting the 'scientificName' column."></li>
+<li>merge or split columns <img src="edit_column.png" alt="Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and showing the 'Edit Column options' when selecting the 'scientificName' column."></li>
 </ul></li>
 <li>Value Transformations<ol style="list-style-type: decimal"><li>built-in transforms:</li></ol><ul><li>convert types (e.g. text to date)</li>
-<li>basic edits (converting case, removing whitespace, etc.)</li>
+<li>basic edits (convert case, remove spaces)</li>
 <li>fill in empty cells if they represent repeated values from above</li>
-</ul><ol start="2" style="list-style-type: decimal"><li>custom transforms:</li></ol><ul><li>programmable via <a href="https://docs.openrefine.org/manual/expressions/#grel-general-refine-expression-language" class="external-link">generic scripting language (General Refine Expression Language)</a>
+</ul><ol start="2" style="list-style-type: decimal"><li>custom transforms:</li></ol><ul><li>programmable in <a href="https://docs.openrefine.org/manual/expressions/#grel-general-refine-expression-language" class="external-link">General Refine Expression Language</a>
 </li></ul></li>
 <li>DEMO</li>
 </ul></div>
 <div class="section level2">
 <h2 id="saving-data-cleaning-steps">Saving Data Cleaning Steps<a class="anchor" aria-label="anchor" href="#saving-data-cleaning-steps"></a></h2>
-<ul><li>Reproducibility<ul><li>OpenRefine records all data transformation steps</li>
+<ul><li>Reproducibility<ul><li>OpenRefine records all data transformations</li>
 <li>
 <code>Undo/Redo</code> allows you to select different stages of processing to revert to</li>
 <li>
 <code>Extract</code> allows you to export the transformation steps in JSON format</li>
 <li>
-<code>Apply</code> allows you to re-use a set of transformations from JSON format</li>
+<code>Apply</code> allows you to perform a set of transformations from JSON format</li>
 </ul></li>
 <li>DEMO</li>
-<li>Summary OpenRefine has a lot of functionality:<ul><li>simple interface for data cleaning</li>
+<li>Summary OpenRefine has a lot of functionality!<ul><li>simple interface for data cleaning</li>
 <li>syntax for doing data transformations</li>
 <li>reproducible processing workflows</li>
 <li>lots of online examples and extensions ## Thanks</li>
