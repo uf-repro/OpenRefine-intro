@@ -24,7 +24,7 @@ lesson_keywords <- c("Open Educational Resources",
                      "Data", 
                      "OpenRefine", 
                      "Workshop")
-lesson_version <- "1.1.3"
+lesson_version <- "1.1.4"
 
 folder_name <- basename(usethis::proj_get())
 package_name <- gsub("-", ".", folder_name)
@@ -73,7 +73,7 @@ jsonlite::write_json(cite_data, ".zenodo.json",
 ```{r, include = FALSE}
 learning_outcomes <- c("load and examine data in OpenRefine", 
                        "save and re-open OpenRefine projects", 
-                       "use clustering and transforms to correct data errors", 
+                       "use clustering and transforms to identify and correct data errors", 
                        "export data cleaning steps as scripts")
 outcomes_text <- paste0("* ", learning_outcomes, collapse = "\n")
 desc::desc_set("learningOutcomes", outcomes_text)

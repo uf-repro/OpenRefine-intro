@@ -51,14 +51,14 @@ class: inverse, center, middle
 ---
 # What is OpenRefine?
 
-OpenRefine is a free open-source tool to clean data in an **automatic** and **reproducible** way.
+OpenRefine is a free open-source tool to clean data in a **scalable** and **reproducible** way.
 
 --
 
-Finding/fixing errors is easy for small data, but:
-* is tedious for larger datasets
+Finding/fixing errors is OK for small data, but:
 * spotting inconsistencies is harder in larger datasets
-* how do you apply the **same** corrections to new data?
+* applying corrections identically to larger datasets is hard!
+* how do you remember and apply the **same** corrections to new data?
 
 ---
 # OpenRefine is NOT for:
@@ -66,7 +66,7 @@ Finding/fixing errors is easy for small data, but:
 * very large datasets (> 1 million rows)
 * complicated calculations (e.g. performing numerical simulations)
 * non-tabular data
-  - there are some features to help with basic un"tidy"ness
+  - BUT there are some features to help with basic un"tidy"ness
 
 ---
 # Learning Outcomes
@@ -90,10 +90,10 @@ class: inverse, center, middle
 ---
 # Workflow
 
-* import your data or load an existing project
+* import from a data file or load an existing project
 * do your data cleaning  
 **OpenRefine does not modify your data files!**
-* Get work out by:
+* Get work out by (one or more of):
   - saving project
   - exporting data 
   - exporting data cleaning script
@@ -126,7 +126,7 @@ knitr::include_graphics("import_preview.png")
 # Saving and Loading Projects
 
 * OpenRefine has its own file format for saving and loading projects
-  - do data cleaning across multiple sessions
+* This lets you do data cleaning across multiple sessions, saving progress
   - no need to re-import data
   
 ---
@@ -145,7 +145,7 @@ class: center, middle
 # Explore Data Distributions
 
 * Use facets to examine how values are distributed in your data
-  - facets apply to a single column
+  - facets apply to one OR multiple columns
   - different types of data require different facets
   - visualization may reveal issues to be fixed (typos, outliers, etc.)
 
@@ -169,12 +169,13 @@ class: inverse, center, middle
 ---
 # Categorical Variables
 
-* data values might have typos and/or other errors
+* data values may have typos and/or errors
 * How do you detect and fix these errors?
 --
 
   - edit the labels directly in Facet mode
-  - use 'Cluster' options to find groups of similar labels
+  - use 'Cluster' options to find groups of similar labels  
+    (maybe these should be the same label?)
 
 ---
 class: center, middle
@@ -196,7 +197,7 @@ class: center, middle
 # Column Transformations
 
 * re-order / re-name columns
-* merge or split columns (by certain separators)
+* merge or split columns
 
 ```{r, echo = FALSE, fig.alt = "Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and showing the 'Edit Column options' when selecting the 'scientificName' column."}
 knitr::include_graphics("edit_column.png")
@@ -207,11 +208,11 @@ knitr::include_graphics("edit_column.png")
 
 1. built-in transforms:
   * convert types (e.g. text to date)
-  * basic edits (converting case, removing whitespace, etc.)
+  * basic edits (convert case, remove spaces)
   * fill in empty cells if they represent repeated values from above
 
 2. custom transforms:
-  * programmable via [generic scripting language (General Refine Expression Language)](https://docs.openrefine.org/manual/expressions/#grel-general-refine-expression-language)
+  * programmable in [General Refine Expression Language](https://docs.openrefine.org/manual/expressions/#grel-general-refine-expression-language)
 
 ---
 class: center, middle
@@ -226,10 +227,10 @@ class: inverse, center, middle
 ---
 # Reproducibility
 
-* OpenRefine records all data transformation steps
+* OpenRefine records all data transformations
 * `Undo/Redo` allows you to select different stages of processing to revert to
 * `Extract` allows you to export the transformation steps in JSON format
-* `Apply` allows you to re-use a set of transformations from JSON format
+* `Apply` allows you to perform a set of transformations from JSON format
 
 ---
 class: center, middle
@@ -239,7 +240,7 @@ class: center, middle
 ---
 # Summary
 
-OpenRefine has a lot of functionality:
+OpenRefine has a lot of functionality!
 * simple interface for data cleaning
 * syntax for doing data transformations
 * reproducible processing workflows

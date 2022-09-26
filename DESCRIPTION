@@ -1,6 +1,6 @@
 Package: OpenRefine.intro
 Title: Data Cleaning with OpenRefine
-Version: 1.1.3
+Version: 1.1.4
 Authors@R: 
     person(given = "Hao",
            family = "Ye",
@@ -21,6 +21,6 @@ Imports:
 URL: https://github.com/uf-repro/OpenRefine-intro
 learningOutcomes: * load and examine data in OpenRefine
  * save and re-open OpenRefine projects
- * use clustering and transforms to correct data errors
+ * use clustering and transforms to identify and correct data errors
  * export data cleaning steps as scripts
 X-schema.org-keywords: Open Educational Resources, Research Support Skills, Data Cleaning, Research Data Management, Data, OpenRefine, Workshop
