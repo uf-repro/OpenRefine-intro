@@ -59,18 +59,24 @@
     </div>
 
 <div id="syllabus" class="section level1">
-<p>Hao Ye Academic Research Consulting &amp; Services, University of Florida (updated: 2023-01-31)</p>
+
+<p>Natya Hans Academic Research Consulting &amp; Services, University of Florida (updated: 2024-02-28)</p>
 <div class="section level2">
 <h2 id="intro">Intro<a class="anchor" aria-label="anchor" href="#intro"></a></h2>
-<ul><li>What is OpenRefine? OpenRefine is a free open-source tool to clean data in a <strong>scalable</strong> and <strong>reproducible</strong> way. Finding/fixing errors works for small data, but:<ul><li>spotting inconsistencies is harder in larger datasets</li>
+<ul><li>What is OpenRefine? OpenRefine is a free open-source tool to clean data in a <strong>scalable</strong> and <strong>reproducible</strong> way. Finding/fixing errors works for small data, but:
+<ul><li>spotting inconsistencies is harder in larger datasets</li>
 <li>applying corrections identically to larger datasets is tedious!</li>
 <li>how do you remember and apply the <strong>same</strong> corrections to new data?</li>
 </ul></li>
-<li>OpenRefine is NOT for:<ul><li>very large datasets (&gt; 1 million rows)</li>
+<li>OpenRefine is NOT for:
+<ul><li>very large datasets (&gt; 1 million rows)</li>
 <li>complicated calculations (e.g. performing numerical simulations)</li>
-<li>non-tabular data<ul><li>BUT there are some features to help with basic un“tidy”ness</li></ul></li>
+<li>non-tabular data
+<ul><li>BUT there are some features to help with basic un”tidy”ness</li>
 </ul></li>
-<li>Learning Outcomes By the end of the workshop, participants will be able to:<ul><li>load and examine data in OpenRefine</li>
+</ul></li>
+<li>Learning Outcomes By the end of the workshop, participants will be able to:
+<ul><li>load and examine data in OpenRefine</li>
 <li>save and re-open OpenRefine projects</li>
 <li>use clustering and transforms to identify and correct data errors</li>
 <li>export data cleaning steps as scripts</li>
@@ -78,75 +84,101 @@
 </ul></div>
 <div class="section level2">
 <h2 id="introduction-to-openrefine">Introduction to OpenRefine<a class="anchor" aria-label="anchor" href="#introduction-to-openrefine"></a></h2>
-<ul><li>Basic Workflow<ul><li>Download from <a href="https://openrefine.org/download.html" class="external-link uri">https://openrefine.org/download.html</a>
+<ul><li>Basic Workflow
+<ul><li>Download from <a href="https://openrefine.org/download.html" class="external-link uri">https://openrefine.org/download.html</a>
 </li>
-<li>OpenRefine runs in your web browser<ul><li>starting the application should open a browser window</li>
+<li>OpenRefine runs in your web browser
+<ul><li>starting the application should open a browser window</li>
 <li>if not, navigate to <a href="http://127.0.0.1:3333/" class="external-link uri">http://127.0.0.1:3333/</a> once the app is running</li>
 </ul></li>
 </ul></li>
-<li>Workflow<ul><li>import from a data file or load an existing project</li>
+<li>Workflow
+<ul><li>import from a data file or load an existing project</li>
 <li>do your data cleaning<br><strong>OpenRefine does not modify your data files!</strong>
 </li>
-<li>Get work out by (one or more of):<ul><li>saving project</li>
+<li>Get work out by (one or more of):
+<ul><li>saving project</li>
 <li>exporting data</li>
 <li>exporting script for data cleaning</li>
 </ul></li>
 </ul></li>
-<li>Importing Data<ul><li>OpenRefine can import most tabular data formats:<ul><li>tab-separated values, comma-separated values, custom separators</li>
+<li>Importing Data
+<ul><li>OpenRefine can import most tabular data formats:
+<ul><li>tab-separated values, comma-separated values, custom separators</li>
 <li>excel spreadsheets (<code>.xls</code>, <code>.xlsx</code>)</li>
 <li>many others</li>
-</ul></li></ul></li>
+</ul></li>
+</ul></li>
 <li>Import Preview <img src="import_preview.png" alt="Screenshot of 'OpenRefine' import screen, using the sample data from https://ndownloader.figshare.com/files/7823341, and showing both the tabular preview and the options for parsing the headers and delimiters."></li>
-<li>Import Settings<ul><li>Check the preview to see if the data file is being parsed correctly!<ul><li>adjust delimiters</li>
+<li>Import Settings
+<ul><li>Check the preview to see if the data file is being parsed correctly!
+<ul><li>adjust delimiters</li>
 <li>number of lines to skip in the header</li>
 <li>column names?</li>
 <li>other settings</li>
-</ul></li></ul></li>
-<li>Saving and Loading Projects<ul><li>OpenRefine has its own file format for saving and loading projects</li>
-<li>This lets you perform data cleaning across multiple sessions, saving progress<ul><li>no need to re-import data</li></ul></li>
+</ul></li>
+</ul></li>
+<li>Saving and Loading Projects
+<ul><li>OpenRefine has its own file format for saving and loading projects</li>
+<li>This lets you perform data cleaning across multiple sessions, saving progress
+<ul><li>no need to re-import data</li>
+</ul></li>
 </ul></li>
 <li>Projects Preview <img src="export_project.png" alt="Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and exporting the OpenRefine project archive."></li>
 <li>DEMO</li>
-<li>Explore Data Distributions<ul><li>Use facets to examine how values are distributed in your data<ul><li>facets apply to one OR multiple columns</li>
+<li>Explore Data Distributions
+<ul><li>Use facets to examine how values are distributed in your data
+<ul><li>facets apply to one OR multiple columns</li>
 <li>different types of data require different facets</li>
 <li>visualization may reveal issues to be fixed (typos, outliers, etc.)</li>
-</ul></li></ul></li>
+</ul></li>
+</ul></li>
 <li>Facet Preview <img src="text_facet.png" alt="Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and faceting the 'yr' column as text."></li>
 <li>DEMO</li>
 </ul></div>
 <div class="section level2">
 <h2 id="basic-error-correction">Basic Error Correction<a class="anchor" aria-label="anchor" href="#basic-error-correction"></a></h2>
-<ul><li>Categorical Variables<ul><li>data values may have typos and/or errors</li>
-<li>How do you detect and fix these errors?<ul><li>edit the labels directly in Facet mode</li>
+<ul><li>Categorical Variables
+<ul><li>data values may have typos and/or errors</li>
+<li>How do you detect and fix these errors?
+<ul><li>edit the labels directly in Facet mode</li>
 <li>use ‘Cluster’ options to find groups of similar labels<br>
 (maybe these should be the same label?)</li>
 </ul></li>
 </ul></li>
 <li>DEMO</li>
-<li>Clustering Methods .small[* key collision<ul><li>
+<li>Clustering Methods .small[* key collision
+<ul><li>
 <code>fingerprint</code> - checks for basic string manipulation differences (spaces, accents, word order)</li>
 <li>
 <code>n-gram fingerprint</code> - checks for clusters with the same set of n-grams (n-letter sequences)</li>
 <li>remaining choices are phonetic (and for different languages)</li>
-<li>nearest neighbor<ul><li>
+<li>nearest neighbor
+<ul><li>
 <code>levenshtein</code> - maximum distance between labels with sequences of at least <code>Block Chars</code> are identical</li>
 <li>
 <code>ppm</code> - based on kolmogorov complexity of the strings]</li>
 </ul></li>
 </ul></li>
-<li>Column Transformations<ul><li>re-order / re-name columns</li>
+<li>Column Transformations
+<ul><li>re-order / re-name columns</li>
 <li>merge or split columns <img src="edit_column.png" alt="Screenshot of 'OpenRefine', using the sample data from https://ndownloader.figshare.com/files/7823341, and showing the 'Edit Column options' when selecting the 'scientificName' column."></li>
 </ul></li>
-<li>Value Transformations<ol style="list-style-type: decimal"><li>built-in transforms:</li></ol><ul><li>convert types (e.g. text to date)</li>
+<li>Value Transformations
+<ol style="list-style-type: decimal"><li>built-in transforms:</li>
+</ol><ul><li>convert types (e.g. text to date)</li>
 <li>basic edits (convert case, remove spaces)</li>
 <li>fill in empty cells with values from above</li>
-</ul><ol start="2" style="list-style-type: decimal"><li>custom transforms:</li></ol><ul><li>programmable in <a href="https://openrefine.org/docs/manual/grel" class="external-link">General Refine Expression Language</a>
-</li></ul></li>
+</ul><ol start="2" style="list-style-type: decimal"><li>custom transforms:</li>
+</ol><ul><li>programmable in <a href="https://openrefine.org/docs/manual/grel" class="external-link">General Refine Expression Language</a>
+</li>
+</ul></li>
 <li>DEMO</li>
 </ul></div>
 <div class="section level2">
 <h2 id="saving-data-cleaning-steps">Saving Data Cleaning Steps<a class="anchor" aria-label="anchor" href="#saving-data-cleaning-steps"></a></h2>
-<ul><li>Reproducibility<ul><li>OpenRefine records all data transformations</li>
+<ul><li>Reproducibility
+<ul><li>OpenRefine records all data transformations</li>
 <li>
 <code>Undo/Redo</code> allows you to select different stages of processing to revert to</li>
 <li>
@@ -155,14 +187,18 @@
 <code>Apply</code> allows you to perform a set of transformations from JSON format</li>
 </ul></li>
 <li>DEMO</li>
-<li>Summary OpenRefine has a lot of functionality!<ul><li>simple interface for data cleaning</li>
+<li>Summary OpenRefine has a lot of functionality!
+<ul><li>simple interface for data cleaning</li>
 <li>syntax for doing data transformations</li>
 <li>reproducible processing workflows</li>
 <li>lots of online examples and extensions ## Thanks</li>
 </ul></li>
 <li>Let me know what content you’d like to see</li>
 <li>Contact me for additional questions or consultation requests!</li>
-<li>Check back in on the libguide for more modules and contact info:<ul><li><a href="https://guides.uflib.ufl.edu/reproducibility" class="external-link uri">https://guides.uflib.ufl.edu/reproducibility</a></li></ul></li>
+<li>Check back in on the libguide for more modules and contact info:
+<ul><li><a href="https://guides.uflib.ufl.edu/reproducibility" class="external-link uri">https://guides.uflib.ufl.edu/reproducibility</a></li>
+</ul></li>
+<li>Orignal slides courtesy of Hao Ye</li>
 </ul></div>
 </div>
 

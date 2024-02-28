@@ -1,6 +1,6 @@
 ---
 title: "`r desc::desc_get('Title', '..')`"
-author: "Hao Ye"
+author: "Natya Hans"
 institute: "Academic Research Consulting & Services, University of Florida"
 date: "(updated: `r Sys.Date()`)"
 output:
@@ -253,3 +253,4 @@ OpenRefine has a lot of functionality!
 * Contact me for additional questions or consultation requests!
 * Check back in on the libguide for more modules and contact info:
   - https://guides.uflib.ufl.edu/reproducibility
+* Orignal slides courtesy of Hao Ye
